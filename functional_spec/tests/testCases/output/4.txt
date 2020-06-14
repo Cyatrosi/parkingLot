@@ -14,8 +14,7 @@ Slot No.	Registration No	Colour
 6	KA-01-HH-3141	Black
 Allocated slot number: 4
 Sorry, parking lot is full
-Sorry, parking lot is full
 KA-01-HH-1234, KA-01-HH-9999, KA-01-P-333
-1, 2, 4
+Not found
 6
 Not found

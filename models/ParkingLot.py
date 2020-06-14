@@ -45,7 +45,10 @@ class ParkingLot:
                     ans = car.getRegNo()
                 else:
                     ans = ans + ", " + car.getRegNo()
-        print(ans)
+        if ans == "":
+            print("Not found")
+        else:
+            print(ans)
 
     def slotNumbersForCarsWithColour(self, color):
         ans = ""
@@ -55,7 +58,10 @@ class ParkingLot:
                     ans = str(i+1)
                 else:
                     ans = ans + ", " + str(i+1)
-        print(ans)
+        if ans == "":
+            print("Not found")
+        else:
+            print(ans)
 
     def slotNumberForRegistrationNumber(self, regNo):        
         for i in range(len(self.slots)):

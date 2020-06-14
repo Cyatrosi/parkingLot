@@ -13,7 +13,7 @@ def copyFile(src, dest):
     for line in srcFileInput:
         destFile.write(line)
 
-def compareFiles(src, dest):
+def compareFiles(src, dest):    
     return filecmp.cmp(src,dest)        
 
 ## ===== TestCases =====
@@ -27,7 +27,7 @@ class sanityTestCase(unittest.TestCase):
             copyFile("functional_spec/tests/testCases/input/" + caseId + ".txt", "functional_spec/fixtures/file_input.txt")            
             temp_file = open("functional_spec/tests/testCases/tmp/" + caseId + ".txt",'w')
             subprocess.call(['bin/parking_lot'], stdout=temp_file)
-            self.assertTrue(compareFiles("functional_spec/tests/testCases/output/" + caseId + ".txt", "functional_spec/tests/testCases/output/" + caseId + ".txt"),True)
+            self.assertTrue(compareFiles("functional_spec/tests/testCases/tmp/" + caseId + ".txt", "functional_spec/tests/testCases/output/" + caseId + ".txt"),True)
         self.revertChange()
 
     def revertChange(self):
